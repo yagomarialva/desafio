@@ -94,6 +94,66 @@ Endpoints disponíveis no backend para interagir com os recursos de livros.
    - Método: DELETE
    - URL: `http://localhost:3000/livros/:id` (Substitua `:id` pelo ID do livro que deseja excluir)
 
+# Livraria Backend - Login
+
+Este é o backend para um sistema de login simples, que fornece endpoints para autenticação de usuários.
+
+## Requisições Do Login
+
+Aqui estão os endpoints disponíveis no backend para autenticação de usuários.
+
+### Requisições POST:
+
+1. **Login de usuário:**
+   - Método: POST
+   - URL: `http://localhost:3000/api/auth/login`
+   - Corpo da requisição:
+     ```json
+     {
+       "username": "nome_de_usuario",
+       "password": "senha_do_usuario"
+     }
+     ```
+
+   - Resposta de sucesso:
+     ```json
+     {
+       "token": "token_de_autenticacao"
+     }
+     ```
+
+   - Resposta de erro:
+     ```json
+     {
+       "error": "Mensagem_de_erro"
+     }
+     ```
+
+2. **Cadastro de novo usuário:**
+   - Método: POST
+   - URL: `http://localhost:3000/api/auth/register`
+   - Corpo da requisição:
+     ```json
+     {
+       "username": "novo_nome_de_usuario",
+       "password": "nova_senha_do_usuario"
+     }
+     ```
+
+   - Resposta de sucesso:
+     ```json
+     {
+       "message": "Usuário cadastrado com sucesso"
+     }
+     ```
+
+   - Resposta de erro:
+     ```json
+     {
+       "error": "Mensagem_de_erro"
+     }
+     ```
+
 
 ---
 Este projeto foi desenvolvido com Docker e Docker Compose. Se você tiver algum problema ou dúvida, sinta-se à vontade para entrar em contato.
