@@ -50,6 +50,51 @@ O contêiner do PostgreSQL estará acessível na porta padrão `5432`. Você pod
 - Para parar e remover os contêineres, consulte a seção "Como Parar e Remover os Contêineres" acima.
 - Para obter mais informações sobre o Docker Compose, consulte a [Documentação Oficial do Docker Compose](https://docs.docker.com/compose/).
 
+## Requisições Disponíveis
+
+Endpoints disponíveis no backend para interagir com os recursos de livros.
+
+### Requisições GET:
+
+1. **Listar todos os livros:**
+   - Método: GET
+   - URL: `http://localhost:3000/livros`
+
+### Requisições POST:
+
+1. **Adicionar um novo livro:**
+   - Método: POST
+   - URL: `http://localhost:3000/livros`
+   - Corpo da requisição:
+     ```json
+     {
+       "titulo": "Título do Livro",
+       "autor": "Autor do Livro",
+       "ano": "Ano do Livro"
+     }
+     ```
+
+### Requisições PUT:
+
+1. **Atualizar um livro existente:**
+   - Método: PUT
+   - URL: `http://localhost:3000/livros/:id` (Substitua `:id` pelo ID do livro que deseja atualizar)
+   - Corpo da requisição:
+     ```json
+     {
+       "titulo": "Novo Título do Livro",
+       "autor": "Novo Autor do Livro",
+       "ano": "Novo Ano do Livro"
+     }
+     ```
+
+### Requisições DELETE:
+
+1. **Excluir um livro:**
+   - Método: DELETE
+   - URL: `http://localhost:3000/livros/:id` (Substitua `:id` pelo ID do livro que deseja excluir)
+
+
 ---
 Este projeto foi desenvolvido com Docker e Docker Compose. Se você tiver algum problema ou dúvida, sinta-se à vontade para entrar em contato.
 ```
